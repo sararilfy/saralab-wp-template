@@ -1,15 +1,5 @@
 <?php get_header(); ?>
-<main>
-	<?php
-	/**
-	 * Display breadcrumb
-	 * From Markup (JSON-LD) structured in schema.org Plugin
-	 *
-	 * @since 1.0.0
-	 */
-	if ( shortcode_exists( 'wp-structuring-markup-breadcrumb' ) ) {
-		echo '<nav class="breadcrumb">' . do_shortcode( '[wp-structuring-markup-breadcrumb]' ) . '</nav>';
-	} ?>
+    <?php get_template_part( 'breadcrumb', 'breadcrumb' ); ?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<article class="global-content-container">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -29,5 +19,4 @@
 				<?php endwhile; endif; ?>
 		<!-- ./global-content-container --></article>
 	</div>
-</main>
 <?php get_footer();

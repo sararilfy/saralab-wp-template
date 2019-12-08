@@ -1,3 +1,4 @@
+<div class="column is-narrow-desktop is-narrow-tablet">
 <?php
 /**
  * Displays a widget area
@@ -7,4 +8,5 @@
  */
 if ( is_active_sidebar( 'archive-sidebar' ) ) {
     dynamic_sidebar('archive-sidebar');
-}
+} ?>
+</div>

@@ -9,4 +9,21 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div class="global-container">
+<header class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                <a href="<?php echo esc_url( home_url() ) ?>">
+                    <?php bloginfo('name'); ?>
+                </a>
+            </h1>
+            <h2 class="subtitle">
+                <?php bloginfo('description'); ?>
+            </h2>
+        </div>
+    </div>
+</header>
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <main class="column">

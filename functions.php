@@ -85,15 +85,15 @@ function saralab_setup() {
 	 * Add support for Custom logo.
 	 * @see https://codex.wordpress.org/Theme_Logo
 	 */
-	add_theme_support(
-		'custom-logo',
-		array(
-			'height'      => 600,
-			'width'       => 600,
-			'flex-width'  => true,
-			'flex-height' => true,
-		)
-	);
+//	add_theme_support(
+//		'custom-logo',
+//		array(
+//			'height'      => 600,
+//			'width'       => 600,
+//			'flex-width'  => true,
+//			'flex-height' => true,
+//		)
+//	);
 
 	saralab_remove_action_head();
 }

@@ -1,0 +1,78 @@
+@charset "utf-8";
+/*
+Theme Name: saralab Theme
+Author: sararilfy
+Author URI: http://saralab.info/
+Description: saralab.info専用テーマ
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+$red: #9b0909;
+$red-invert: #fff;
+$family-sans-serif: -apple-system, BlinkMacSystemFont, "YuGothic", "Yu Gothic", sans-serif;
+$primary: $red;
+$primary-invert: $red-invert;
+$link: $red;
+/*! bulma.io v0.8.0 | MIT License | github.com/jgthms/bulma */
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+
+$color_body: #494949;
+$color_border: #ccc;
+$color_bg: #eee;
+
+.wp-block-cover,
+.wp-block-image {
+  margin: 0 0 40px;
+}
+.gallery-item{
+  dt {
+    background: none;
+    padding: 0;
+  }
+}
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.sticky {
+  display: block;
+}
+
+.gallery-caption {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

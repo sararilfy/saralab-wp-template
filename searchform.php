@@ -7,10 +7,12 @@
  */ ?>
 <form action="/" method="get">
 	<input type="hidden" value="post" name="post_type" id="post_type">
-	<table class="global-widget-search">
-		<tr>
-			<td><input type="search" name="s" id="global-widget-search" value="<?php the_search_query(); ?>" placeholder="検索するテキストを入力"></td>
-			<td><input type="submit" value=""></td>
-		</tr>
-	</table>
+    <div class="field has-addons">
+        <div class="control">
+            <input class="input" type="search" name="s" id="global-widget-search" value="<?php the_search_query(); ?>" placeholder="検索するテキストを入力">
+        </div>
+        <div class="control">
+            <input class="button is-primary" type="submit" value="検索">
+        </div>
+    </div>
 </form>

@@ -1,0 +1,31 @@
+{
+  "name": "saralab",
+  "version": "1.0.0",
+  "description": "Safalab wordpress templates.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "node-sass _sass/style.scss style.css",
+    "css-deploy": "npm run css-build && npm run css-postcss",
+    "css-postcss": "postcss --use autoprefixer --output style.css style.css",
+    "css-watch": "npm run css-build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sararilfy/saralab-wp-template.git"
+  },
+  "author": "sararilfy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sararilfy/saralab-wp-template/issues"
+  },
+  "homepage": "https://github.com/sararilfy/saralab-wp-template#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "bulma": "^0.8.0",
+    "bulma-start": "0.0.3",
+    "node-sass": "^4.13.0",
+    "postcss-cli": "^6.1.3"
+  }
+}
