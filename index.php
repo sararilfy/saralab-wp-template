@@ -16,7 +16,7 @@
                     </h2>
                     <?php if ( has_post_thumbnail() ) { ?>
                         <figure><a href="<?php the_permalink(); ?>"><?php
-                            esc_html( the_post_thumbnail( 'large' ) ); ?>
+                            esc_html( the_post_thumbnail( 'medium' ) ); ?>
                         </a></figure>
                     <?php }
                         get_template_part( 'tabs', 'tabs' );

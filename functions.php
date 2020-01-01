@@ -181,3 +181,27 @@ function saralab_scripts   () {
     wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/script.js' );
 }
 add_action( 'wp_enqueue_scripts', 'saralab_scripts' );
+
+/**
+ * AMPにGoogle タグマネージャーをインストール
+ * AMPにGoogle AdSense導入
+ * @Date 2019/01/04
+ */
+
+function amp_add_script_head(){
+    ?>
+    <!-- AMP Analytics --><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <!-- AMP Ads --><script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <?php
+}
+add_action('amp_post_template_head', 'amp_add_script_head');
+
+function amp_add_script_footer() {
+    ?>
+    <!-- Google Adsense -->
+    <amp-ad width="100vw" height=320 type="adsense" data-ad-client="ca-pub-1528327588378459" data-ad-slot="1990600923" data-auto-format="rspv" data-full-width><div overflow></div></amp-ad>
+    <!-- Google Tag Manager -->
+    <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-M373TN&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+    <?php
+}
+add_action('amp_post_template_footer', 'amp_add_script_footer');
