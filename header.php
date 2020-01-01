@@ -10,14 +10,19 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="navbar is-spaced">
-    <div class="navbar-menu">
+    <div class="navbar-brand">
         <h1 class="navbar-item">
             <a class="title" href="<?php echo esc_url( home_url() ) ?>">
                 <?php esc_html( bloginfo('name') ); ?>
             </a>
         </h1>
-        <p class="navbar-item"><?php esc_html( bloginfo('description') ); ?></p>
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
     </div>
+    <p class="navbar-item"><?php esc_html( bloginfo('description') ); ?></p>
     <nav class="navbar-end">
         <?php
         /**
@@ -29,7 +34,8 @@
         if ( has_nav_menu( 'header-category-nav' ) ) {
             $global_menu = array(
                 'menu'            => 'header-category-nav',
-                'menu_class'      => 'navbar-menu is-multiline header-category-nav-menu',
+                'menu_class'      => 'navbar-menu header-category-nav-menu',
+                'menu_id'         => 'navMenu',
                 'theme_location'  => 'header-category-nav',
                 'container_class' => 'navbar-item'
             );
