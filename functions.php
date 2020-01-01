@@ -85,15 +85,24 @@ function saralab_setup() {
 	 * Add support for Custom logo.
 	 * @see https://codex.wordpress.org/Theme_Logo
 	 */
-//	add_theme_support(
-//		'custom-logo',
-//		array(
-//			'height'      => 600,
-//			'width'       => 600,
-//			'flex-width'  => true,
-//			'flex-height' => true,
-//		)
-//	);
+	add_theme_support(
+		'custom-logo',
+		array(
+			'height'      => 600,
+			'width'       => 600,
+			'flex-width'  => true,
+			'flex-height' => true,
+		)
+	);
+
+    /**
+     * Register navigation.
+     */
+    register_nav_menus(
+        array(
+            'header-category-nav' => 'ヘッダーカテゴリーナビ'
+        )
+    );
 
 	saralab_remove_action_head();
 }
@@ -151,7 +160,7 @@ function saralab_widgets_init() {
 			'description'   => '',
 			'before_widget' => '<div id="%1$s" class="widget widget-sidebar %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="title-widget">',
+			'before_title'  => '<h3 class="title-widget title is-4">',
 			'after_title'   => '</h3>'
 		)
 	);

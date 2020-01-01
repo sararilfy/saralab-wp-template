@@ -5,7 +5,7 @@
 </div>
 <footer class="footer">
     <div class="content has-text-centered">
-        <small>&copy;&nbsp;<?php echo get_user_meta( 1, 'nickname', true ); ?></small>
+        <small>&copy;&nbsp;<?php echo esc_html( get_user_meta( 1, 'nickname', true ) ); ?></small>
     </div>
 </footer>
 <?php wp_footer(); ?>
