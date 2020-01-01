@@ -1,23 +1,22 @@
 # saralab-wp-template
-saralab.infoのWordPressブログのテンプレート作成
+saralab.info専用のWordPressブログのテンプレート作成
 
 ## ファイル
 
-- index.php(archive.php を兼ねる)
-- singular.php
 - 404.php
-- search.php
-- header.php
+- breadcrumb.php
+- card.html
 - footer.php
+- functions.php
+- header.php
+- index.php
+- script.js
 - searchform.php
 - sidebar.php
-- pagination.php
-- functions.php
+- singular.php
 - style.css
-- screenshot.png
+- tabs.php
 
-## プラグイン
+## デザインについて
 
-## カスタマイズ
-
-bulma
+Bulmaを使用（ https://bulma.io/ ）
