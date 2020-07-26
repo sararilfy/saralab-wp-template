@@ -25,17 +25,10 @@ Template Name: landing page
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT69J9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <?php endif; ?>
-    <main class="section">
-        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <section class="container">
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                    <div class="content">
-                        <?php the_title('<h1 class="title">', '</h1>');
-                        the_content(); ?>
-                    </div>
-                <?php endwhile; endif; ?>
-            </section>
-        </div>
+    <main id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	    <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+	    the_content();
+	    endwhile; endif; ?>
     </main>
 <?php wp_footer(); ?>
 </body>
